@@ -1,3 +1,28 @@
+openssl (1.0.2g-1ubuntu4.6) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: Montgomery multiplication may produce incorrect
+    results
+    - debian/patches/CVE-2016-7055.patch: fix logic in
+      crypto/bn/asm/x86_64-mont.pl.
+    - CVE-2016-7055
+  * SECURITY UPDATE: DoS via warning alerts
+    - debian/patches/CVE-2016-8610.patch: don't allow too many consecutive
+      warning alerts in ssl/d1_pkt.c, ssl/s3_pkt.c, ssl/ssl.h,
+      ssl/ssl_locl.h.
+    - debian/patches/CVE-2016-8610-2.patch: fail if an unrecognised record
+      type is received in ssl/s3_pkt.c.
+    - CVE-2016-8610
+  * SECURITY UPDATE: Truncated packet could crash via OOB read
+    - debian/patches/CVE-2017-3731.patch: harden RC4_MD5 cipher in
+      crypto/evp/e_rc4_hmac_md5.c.
+    - CVE-2017-3731
+  * SECURITY UPDATE: BN_mod_exp may produce incorrect results on x86_64
+    - debian/patches/CVE-2017-3732.patch: fix carry bug in
+      bn_sqr8x_internal in crypto/bn/asm/x86_64-mont5.pl.
+    - CVE-2017-3732
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Mon, 30 Jan 2017 10:31:12 -0500
+
 openssl (1.0.2g-1ubuntu4.5) xenial-security; urgency=medium
 
   * SECURITY REGRESSION: incomplete fix for CVE-2016-2182 (LP: #1626883)
