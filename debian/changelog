@@ -1,3 +1,20 @@
+openssl (1.0.2g-1ubuntu4.10) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: Read/write after SSL object in error state
+    - debian/patches/CVE-2017-3737-pre.patch: add test/ssltestlib.*,
+      add to test/Makefile.
+    - debian/patches/CVE-2017-3737-1.patch: don't allow read/write after
+      fatal error in ssl/ssl.h.
+    - debian/patches/CVE-2017-3737-2.patch: add test to ssl/Makefile,
+      ssl/fatalerrtest.c, test/Makefile.
+    - CVE-2017-3737
+  * SECURITY UPDATE: rsaz_1024_mul_avx2 overflow bug on x86_64
+    - debian/patches/CVE-2017-3738.patch: fix digit correction bug in
+      crypto/bn/asm/rsaz-avx2.pl.
+    - CVE-2017-3738
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Thu, 07 Dec 2017 13:17:37 -0500
+
 openssl (1.0.2g-1ubuntu4.9) xenial-security; urgency=medium
 
   * SECURITY UPDATE: Malformed X.509 IPAddressFamily could cause OOB read
