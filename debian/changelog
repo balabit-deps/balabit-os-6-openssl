@@ -1,3 +1,12 @@
+openssl (1.0.2g-1ubuntu4.11) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: DoS via ASN.1 types with a recursive definition
+    - debian/patches/CVE-2018-0739.patch: limit stack depth in
+      crypto/asn1/asn1.h, crypto/asn1/asn1_err.c, crypto/asn1/tasn_dec.c.
+    - CVE-2018-0739
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Tue, 27 Mar 2018 14:18:33 -0400
+
 openssl (1.0.2g-1ubuntu4.10) xenial-security; urgency=medium
 
   * SECURITY UPDATE: Read/write after SSL object in error state
