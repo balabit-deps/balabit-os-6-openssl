@@ -1,3 +1,12 @@
+openssl (1.0.2g-1ubuntu4.15) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: 0-byte record padding oracle
+    - debian/patches/CVE-2019-1559.patch: go into the error state if a
+      fatal alert is sent or received in ssl/d1_pkt.c, ssl/s3_pkt.c.
+    - CVE-2019-1559
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Tue, 26 Feb 2019 13:16:01 -0500
+
 openssl (1.0.2g-1ubuntu4.14) xenial-security; urgency=medium
 
   * SECURITY UPDATE: PortSmash side channel attack
