@@ -1,3 +1,12 @@
+openssl (1.0.2g-1ubuntu4.17) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: Raccoon Attack
+    - debian/patches/CVE-2020-1968.patch: disable ciphers that reuse the
+      DH secret across multiple TLS connections in ssl/s3_lib.c.
+    - CVE-2020-1968
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Tue, 15 Sep 2020 14:13:51 -0400
+
 openssl (1.0.2g-1ubuntu4.16) xenial-security; urgency=medium
 
   * SECURITY UPDATE: ECDSA remote timing attack
