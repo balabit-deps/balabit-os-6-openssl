@@ -1,0 +1,19 @@
+Description: Enable X509_V_FLAG_TRUSTED_FIRST by default
+ This is to ensure that letsencrypt connection with the default chain
+ remains trusted even after the expiry of the redundand CA
+ certificate.
+Author: Dimitri John Ledkov <dimitri.ledkov@canonical.com>
+Bug-Ubuntu: https://bugs.launchpad.net/bugs/1928989
+
+
+--- openssl-1.0.2g.orig/crypto/x509/x509_vpm.c
++++ openssl-1.0.2g/crypto/x509/x509_vpm.c
+@@ -537,7 +537,7 @@ static const X509_VERIFY_PARAM default_t
+      "default",                 /* X509 default parameters */
+      0,                         /* Check time */
+      0,                         /* internal flags */
+-     0,                         /* flags */
++     X509_V_FLAG_TRUSTED_FIRST, /* flags */
+      0,                         /* purpose */
+      0,                         /* trust */
+      100,                       /* depth */

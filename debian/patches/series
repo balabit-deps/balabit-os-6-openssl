@@ -80,3 +80,4 @@ CVE-2021-23840-pre1.patch
 CVE-2021-23840-pre2.patch
 CVE-2021-23840.patch
 CVE-2021-23841.patch
+trusted-first-by-default.patch

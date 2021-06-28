@@ -1,3 +1,11 @@
+openssl (1.0.2g-1ubuntu4.20) xenial-security; urgency=medium
+
+  * Enable X509_V_FLAG_TRUSTED_FIRST by default, such that letsencrypt
+    connection with the default chain remains trusted even after the
+    expiry of the redundant CA certificate. LP: #1928989
+
+ -- Dimitri John Ledkov <dimitri.ledkov@canonical.com>  Mon, 28 Jun 2021 14:05:36 +0100
+
 openssl (1.0.2g-1ubuntu4.19) xenial-security; urgency=medium
 
   * SECURITY UPDATE: Integer overflow in CipherUpdate
